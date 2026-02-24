@@ -1,4 +1,3 @@
-#
 # Matrix Orbital LCD (20x4) helper (legacy)
 #
 # Original copyright (c) 1999-2026 Alexis Domjan <adomjan@horus.ch>
@@ -12,6 +11,7 @@ use Carp qw(croak carp);
 use IO::Handle ();
 use parent qw(Exporter);
 
+# All functions
 our @EXPORT = qw(
   lcd_open
   lcd_close
@@ -140,6 +140,7 @@ my  $clear_screen             = "\x0C";
 
 # --- Helpers ----------------------------------------------------------------
 
+# Enable autoflush
 sub _autoflush_on {
   my ($fh) = @_;
   return if !$fh;
@@ -152,6 +153,7 @@ sub _autoflush_on {
   }
 }
 
+# Configure serial port using stty
 sub _configure_serial {
   my (%opt) = @_;
   my $dev   = $opt{device};
@@ -181,10 +183,12 @@ sub _configure_serial {
   return 0;
 }
 
+# Fail if device is not opened
 sub _require_open {
   croak "LCD not opened: call lcd_open() first" if !$opened;
 }
 
+# Check byte
 sub _byte {
   my ($n) = @_;
   $n //= 0;
@@ -193,6 +197,7 @@ sub _byte {
   return chr($n);
 }
 
+# Send a command to LCD
 sub lcd_cmd {
   my ($txt) = @_;
   lcd_write($cmd . ($txt // ''));
