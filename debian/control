@@ -1,0 +1,15 @@
+Source: lcd-matrixorbital-perl
+Section: perl
+Priority: optional
+Maintainer: Alexis Domjan <adomjan@horus.ch>
+Build-Depends: debhelper-compat (= 13), dh-perl, perl
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Homepage: https://github.com/gaialabs/lcd-matrixorbital-perl
+
+Package: liblcd-matrixorbital-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}
+Description: Legacy Matrix Orbital serial LCD helper (20x4)
+ Procedural Perl module to drive a Matrix Orbital serial LCD (20x4) and
+ read keypad input, originally written in 1999 and modernised in 2026
