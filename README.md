@@ -342,4 +342,3 @@ GPL-2.0-or-later (see `debian/copyright` or the license text on Debian systems i
 ## Contributing
 
 Issues and PRs are welcome.  
-If you plan a larger refactor (e.g., a true OO interface supporting multiple LCD instances), please keep the current procedural API intact or provide compatibility wrappers.
