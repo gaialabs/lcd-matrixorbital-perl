@@ -1,0 +1,32 @@
+# ---- Debian build artifacts ----
+
+# Binary packages
+*.deb
+*.udeb
+
+# Build info
+*.build
+*.buildinfo
+*.changes
+*.dsc
+
+# Source tarballs
+*.tar.*
+*.orig.tar.*
+
+# Debhelper internals
+.debhelper/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+
+# Temporary package build directory
+debian/*/
+!debian/source/
+!debian/patches/
+
+# Editor junk
+*~
+*.swp
+*.swo
