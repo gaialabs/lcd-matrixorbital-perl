@@ -6,7 +6,7 @@
 # Copyright (c) 2026 Alexis Domjan <adomjan@horus.ch>
 #
 
-use lib '.';
+# use lib '.'; # not needed if package is installed
 use strict;
 use warnings;
 
