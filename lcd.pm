@@ -1,14 +1,7 @@
 #
 # Matrix Orbital LCD (20x4) helper (legacy)
 #
-# Original copyright (c) 1999 Alexis Domjan <adomjan@horus.ch>
-#
-# Modernised in 2026:
-#  - strict/warnings
-#  - safer serial initialisation
-#  - configurable device (no hard-coded tty)
-#  - cleaner internal state, better error handling
-#  - backwards compatible API (same exported functions)
+# Original copyright (c) 1999-2026 Alexis Domjan <adomjan@horus.ch>
 #
 package lcd;
 
@@ -173,7 +166,8 @@ sub _configure_serial {
   );
 
   for my $argv (@cmd_try) {
-    my $ok = system(@$argv);
+    #my $ok = system(@$argv);
+    my $ok = system(join(' ', @$argv) . ' >/dev/null 2>&1');
     return 1 if $ok == 0;
   }
 

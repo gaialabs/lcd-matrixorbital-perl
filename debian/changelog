@@ -1,4 +1,4 @@
-lcd-matrixorbital-perl (1.0-1) unstable; urgency=medium
+lcd-matrixorbital-perl (1.0) unstable; urgency=medium
 
   * Initial Debian packaging of legacy Matrix Orbital LCD Perl module.
   * Make serial device configurable at initialisation.

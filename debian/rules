@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --with perl
+	dh $@
 
 # No upstream build system (no Makefile.PL). We just install the module file.
 override_dh_auto_configure:
